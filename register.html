@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - ThriveFitness</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 0.8em;
+            margin-bottom: 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.8em;
+            border: none;
+            border-radius: 4px;
+            background-color: #007BFF;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+        }
+
+        .success-message.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form id="registration-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="plan">Select Plan:</label>
+            <select id="plan" name="plan" required>
+                <option value="Basic">Basic</option>
+                <option value="Premium">Premium</option>
+                <option value="VIP">VIP</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="success-message" id="success-message">
+            <h1>Successfully Submitted!</h1>
+            <p>Thank you for registering with us. We will get in touch with you soon.</p>
+            <a href="register.html" class="btn">Go Back</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Hide the form and show the success message
+            document.getElementById('registration-form').style.display = 'none';
+            document.getElementById('success-message').classList.add('active');
+        });
+    </script>
+</body>
+
+</html>
