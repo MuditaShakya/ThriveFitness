@@ -1,0 +1,1 @@
+ThriveFitness is a modern and responsive web page designed to showcase the ultimate fitness experience. Built using HTML, CSS, and JavaScript, this project aims to provide an intuitive and engaging platform for users to explore fitness plans, membership options, and gym services.
